@@ -1,0 +1,14 @@
+sudo apt install python-jupyterlab
+apt-cache search jupyterlab
+sudo apt install python3-venv
+mkdir pystuff
+cd pystuff/
+python3 -m venv my_v_env
+source my_v_env/bin/activate
+pip install jupyter
+jupyter notebook
+cat ~/.bash_history py_hist.txt
+cat ~/.bash_history > py_hist.txt
+tail py_hist.txt 
+rm py_hist.txt 
+exit
