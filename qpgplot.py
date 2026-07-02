@@ -1,12 +1,14 @@
+#simple script to check postgres connection
+
+import json
 import psycopg
 import matplotlib.pyplot as plt
 
-conn = psycopg.connect(
-    dbname="analysis",
-    user="postgres",
-    password="Duluth/77",
-    host="localhost",
-)
+with open("dbconfig.json") as f:
+    config = json.load(f)
+
+
+conn = psycopg.connect(**config)
 
 with open("nyquery.sql") as f:
     query = f.read()
