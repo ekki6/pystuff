@@ -59,7 +59,7 @@ while True:
     
 # modified to remove padding and use symbols
     for row in grid:
-        print(" ".join("O" if x else "-" for x in row[1:-1]))
+        print(" ".join("O" if x else "-" for x in row))
     
 #    for row in grid:
 #        print(" ".join(map(str, row)))
